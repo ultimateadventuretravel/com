@@ -1,0 +1,206 @@
+
+/* ==========================================
+   Ultimate Adventure Travel Pty Ltd
+   animations.css
+========================================== */
+
+/* General Transitions */
+*{
+    transition: background-color .3s ease,
+                color .3s ease,
+                transform .3s ease,
+                box-shadow .3s ease,
+                opacity .3s ease;
+}
+
+/* Buttons */
+.btn,
+.btn-primary{
+    transition: all .3s ease;
+}
+
+.btn:hover,
+.btn-primary:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.20);
+}
+
+/* Cards */
+.card,
+.tour-card,
+.job,
+.feature{
+    transition: all .35s ease;
+}
+
+.card:hover,
+.tour-card:hover,
+.job:hover,
+.feature:hover{
+    transform: translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+/* Images */
+.card img,
+.tour-card img{
+    transition:transform .5s ease;
+}
+
+.card:hover img,
+.tour-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Navigation */
+
+.nav-links a{
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#F4B400;
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+/* Logo */
+
+.logo:hover{
+    transform:scale(1.03);
+}
+
+/* Hero */
+
+.hero h1,
+.about-hero h1{
+    animation:fadeDown 1s ease;
+}
+
+.hero p,
+.about-hero p{
+    animation:fadeUp 1.2s ease;
+}
+
+/* CTA */
+
+.cta{
+    animation:fadeIn 1.2s ease;
+}
+
+/* Forms */
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#0D4D92;
+    box-shadow:0 0 8px rgba(13,77,146,.25);
+}
+
+/* Footer Links */
+
+footer a:hover{
+    color:#F4B400;
+}
+
+/* Back To Top Button */
+
+#topBtn{
+    transition:.3s;
+}
+
+#topBtn:hover{
+    transform:translateY(-5px);
+}
+
+/* Keyframes */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.fade-in{
+    animation:fadeIn 1s ease both;
+}
+
+.fade-down{
+    animation:fadeDown .8s ease both;
+}
+
+.fade-up{
+    animation:fadeUp .8s ease both;
+}
+
+.zoom-in{
+    animation:zoomIn .8s ease both;
+}
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

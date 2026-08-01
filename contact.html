@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Ultimate Adventure Travel Pty Ltd</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<style>
+body{margin:0;font-family:Poppins,sans-serif;background:#f5f7fb;color:#333}
+.container{max-width:1200px;margin:auto;padding:20px}
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:55px}
+.logo span{margin-left:10px;font-weight:700;color:#0d4d92}
+.nav-links{display:flex;gap:18px;list-style:none}
+.nav-links a{text-decoration:none;color:#0d4d92;font-weight:600}
+.hero{padding:120px 20px;text-align:center;color:#fff;background:linear-gradient(rgba(13,77,146,.75),rgba(13,77,146,.75)),url('images/hero/hero5.jpg') center/cover no-repeat}
+.hero h1{font-size:3rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0}
+.card,.form{background:#fff;padding:30px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+.info p{margin:14px 0}
+.info i{color:#0d4d92;width:24px}
+input,textarea{width:100%;padding:14px;border:1px solid #ccc;border-radius:8px;box-sizing:border-box;margin-bottom:15px}
+textarea{min-height:140px}
+.btn{background:#0d4d92;color:#fff;border:none;padding:14px 28px;border-radius:8px;font-weight:600;cursor:pointer}
+.btn:hover{background:#f4b400;color:#000}
+iframe{width:100%;height:350px;border:0;border-radius:14px}
+footer{background:#052b57;color:#fff;text-align:center;padding:30px;margin-top:50px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.navbar{flex-direction:column}.nav-links{flex-wrap:wrap;justify-content:center;padding:0}.hero h1{font-size:2.2rem}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container navbar">
+<a class="logo" href="index.html">
+<img src="images/logo.png" alt="Logo">
+<span>Ultimate Adventure Travel Pty Ltd</span>
+</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="tours.html">Tours</a></li>
+<li><a href="flights.html">Flights</a></li>
+<li><a href="visa.html">Visa</a></li>
+<li><a href="jobs.html">Jobs</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</header>
+
+<section class="hero">
+<h1>Contact Us</h1>
+<p>We're here to help plan your next adventure.</p>
+</section>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card info">
+<h2>Get in Touch</h2>
+
+<p><i class="fas fa-phone"></i> Office: +61 2 9004 2073</p>
+<p><i class="fab fa-whatsapp"></i> WhatsApp: +61 491 697 818</p>
+<p><i class="fas fa-envelope"></i> ultimateadventuretrav@gmail.com</p>
+<p><i class="fas fa-globe"></i> Australia</p>
+
+<h3>Business Hours</h3>
+<p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+<p>Saturday: 9:00 AM - 1:00 PM</p>
+<p>Sunday: Closed</p>
+
+<h3>Follow Us</h3>
+<p>
+<i class="fab fa-facebook"></i> Facebook<br>
+<i class="fab fa-instagram"></i> Instagram<br>
+<i class="fab fa-linkedin"></i> LinkedIn
+</p>
+
+</div>
+
+<div class="form">
+
+<h2>Send Us a Message</h2>
+
+
+<form id="contact-form">
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
+
+    <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number">
+
+    <textarea
+        name="message"
+        placeholder="How can we help you?"
+        required></textarea>
+
+    <button class="btn" type="submit">
+
+        <i class="fas fa-paper-plane"></i>
+
+        Send Message
+
+    </button>
+
+</form>
+</div>
+
+</div>
+
+<h2 style="text-align:center;color:#0d4d92;">Find Us</h2>
+
+<iframe src="https://www.google.com/maps?q=Australia&output=embed" loading="lazy"></iframe>
+
+<section style="background:#0d4d92;color:#fff;padding:40px;border-radius:14px;text-align:center;margin-top:40px">
+<h2>Start Your Journey Today</h2>
+<p>Whether you're planning a holiday, booking a flight, or seeking visa assistance, our team is ready to help.</p>
+<a href="mailto:ultimateadventuretrav@gmail.com" class="btn" style="background:#f4b400;color:#000;text-decoration:none;">Email Us</a>
+</section>
+
+</div>
+
+<footer>
+<p>&copy; 2026 Ultimate Adventure Travel Pty Ltd. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "BU1ZAa0i80eRuy8CA",
+});
+</script>
+<script src="js/script.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/animations.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2128 @@
+/* ===========================================
+   ULTIMATE ADVENTURE TRAVEL PTY LTD
+   Main Stylesheet
+=========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F5F9FF;
+    color:#222;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===========================
+   COLORS
+=========================== */
+
+:root{
+
+    --blue:#0A66C2;
+    --darkBlue:#083D77;
+    --gold:#F4B400;
+    --white:#ffffff;
+    --light:#F5F9FF;
+    --text:#222;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    background:rgba(8,61,119,.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+}
+
+.logo img{
+
+width:70px;
+
+height:70px;
+
+object-fit:contain;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+.logo span{
+
+    color:var(--gold);
+
+    font-size:14px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+.btn-primary{
+
+    background:var(--gold);
+
+    color:#222;
+
+    padding:13px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:white;
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    position: relative;
+    height: 100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../images/hero/hero1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    overflow:hidden;
+
+    transition:opacity .8s ease;
+
+}
+.hero-content{
+
+    max-width:900px;
+
+    color:white;
+
+    animation:fadeIn 1.5s ease;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    margin:20px 0;
+
+    font-weight:800;
+
+letter-spacing:-1px;
+}
+
+.hero h2{
+
+    font-size:2rem;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    font-weight:400;
+
+}
+
+.hero p{
+
+    font-size:1.15rem;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+.btn-secondary{
+
+    background:transparent;
+
+    color:white;
+
+    border:2px solid white;
+
+    padding:13px 28px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#222;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+.nav-links a{
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:#F4B400;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+/* ===========================
+   BOOKING SECTION
+=========================== */
+
+.booking{
+
+    background:white;
+
+    padding:100px 0;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.section-heading h2{
+
+    font-size:42px;
+
+    color:#083D77;
+
+    margin-bottom:15px;
+
+}
+
+.section-heading p{
+
+    color:#666;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.booking-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    background:#F5F9FF;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#083D77;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    padding:15px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:Poppins,sans-serif;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#0A66C2;
+
+    outline:none;
+
+}
+
+.full-width{
+
+    grid-column:1/-1;
+
+}
+
+.booking button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+/* ===========================
+   SERVICES
+=========================== */
+
+.services{
+
+    padding:100px 0;
+
+    background:#F5F9FF;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.service-card i{
+
+    font-size:48px;
+
+    color:#0A66C2;
+
+    margin-bottom:20px;
+
+}
+
+.service-card h3{
+
+    color:#083D77;
+
+    margin-bottom:15px;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+}
+/* ===========================
+   DESTINATIONS
+=========================== */
+
+.destinations{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.destination-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.destination-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.destination-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.destination-content{
+
+    padding:25px;
+
+}
+
+.destination-content h3{
+
+    color:#083D77;
+
+    margin-bottom:15px;
+
+}
+
+.destination-content p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+
+    padding:100px 0;
+
+    background:#F5F9FF;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.why-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.why-card i{
+
+    font-size:50px;
+
+    color:#0A66C2;
+
+    margin-bottom:20px;
+
+}
+
+.why-card h3{
+
+    color:#083D77;
+
+    margin-bottom:15px;
+
+}
+.why-card p{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-top:10px;
+
+}
+/* ===========================
+   STATISTICS
+=========================== */
+
+.stats{
+
+    background:#083D77;
+
+    color:white;
+
+    padding:80px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:30px;
+
+    text-align:center;
+
+}
+
+.stat-box h2{
+
+    font-size:52px;
+
+    color:#F4B400;
+
+    margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+    font-size:18px;
+
+}
+/* ===========================
+   TOUR PACKAGES
+=========================== */
+
+.packages{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+.package-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.package-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.package-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.package-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.package-content{
+
+    padding:25px;
+
+}
+
+.package-content h4{
+
+    color:#0A66C2;
+
+    margin:15px 0;
+
+}
+
+/* ===========================
+   EMPLOYMENT
+=========================== */
+
+.employment{
+
+    padding:100px 0;
+
+    background:#083D77;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.employment p{
+
+    max-width:800px;
+
+    margin:25px auto 35px;
+
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+
+.testimonials{
+
+    padding:100px 0;
+
+    background:#F5F9FF;
+
+}
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.testimonial-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    font-style:italic;
+
+}
+
+.testimonial-card p{
+
+    color:#444;
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+
+}
+
+.testimonial-card h4{
+
+    margin-top:20px;
+
+    color:#083D77;
+
+    font-style:normal;
+
+    font-weight:600;
+
+}/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+.faq-item{
+
+    background:#F5F9FF;
+
+    border-left:5px solid #0A66C2;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+}
+
+.faq-item h3{
+
+    padding:22px 25px;
+
+    cursor:pointer;
+
+    color:#083D77;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.faq-item h3:hover{
+
+    background:#EAF3FF;
+
+}
+
+.faq-item p{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    padding:0 25px;
+
+    transition:max-height .4s ease, padding .4s ease;
+
+    color:#555;
+
+}
+
+.faq-item.active p{
+
+    max-height:200px;
+
+    padding:0 25px 20px;
+
+}
+/* ===========================
+   NEWSLETTER
+=========================== */
+
+.newsletter{
+
+    background:#083D77;
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 0;
+
+}
+
+.newsletter-form{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.newsletter-form input{
+
+    width:350px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    padding:100px 0;
+
+    background:#F5F9FF;
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.contact-card{
+
+    background:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact-card i{
+
+    font-size:45px;
+
+    color:#0A66C2;
+
+    margin-bottom:20px;
+
+}
+
+.contact-card a{
+
+    color:#083D77;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#062B52;
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px 0;
+
+}
+
+footer h2{
+
+    color:#F4B400;
+
+    margin-bottom:15px;
+
+}
+/* ===========================
+   WHATSAPP BUTTON
+=========================== */
+
+.whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    background:#25D366;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.1);
+
+}
+/* ===========================
+   BACK TO TOP
+=========================== */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:105px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0A66C2;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    display:none;
+
+    z-index:999;
+
+}
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+
+    width:30px;
+
+    height:3px;
+
+    background:white;
+
+    margin:4px 0;
+
+    transition:.35s;
+
+}
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:rotate(45deg) translate(6px,6px);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:rotate(-45deg) translate(7px,-7px);
+
+}
+@media(max-width:900px){
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .nav-links{
+
+    position:absolute;
+
+    top:80px;
+
+    left:-100%;
+
+    width:100vw;
+
+    height:calc(100vh - 80px);
+
+    background:#0d4d92;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding-top:40px;
+
+    transition:left .4s ease;
+
+    z-index:999;
+
+}
+
+    .nav-links.active{
+
+        left:0;
+
+    }
+
+    .nav-links li{
+
+        margin:18px 0;
+
+    }
+
+}
+.hero{
+
+    min-height:100vh;
+
+}
+
+.hero-content{
+
+    width:90%;
+
+    margin:auto;
+
+}
+
+.hero h1{
+
+    font-size:2.4rem;
+
+    line-height:1.2;
+
+}
+
+.hero h2{
+
+    font-size:1.4rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+}
+/* ================= STATISTICS ================= */
+
+.stats{
+
+    background:#ffffff;
+
+    padding:80px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h2{
+
+    font-size:3rem;
+
+    color:#0d4d92;
+
+}
+
+.stat-card p{
+
+    color:#555;
+
+    margin-top:10px;
+
+    font-weight:600;
+
+}
+/* ================= SEARCH BAR ================= */
+
+.search-section{
+    background:#ffffff;
+    padding:40px 0;
+    margin-top:-60px;
+    position:relative;
+    z-index:20;
+}
+
+.search-box{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+
+    gap:15px;
+
+    padding:25px;
+}
+
+.search-box select,
+.search-box input{
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.search-box button{
+
+    background:#f4b400;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#0d4d92;
+
+    color:white;
+
+}
+/* ================= FEATURED TOURS ================= */
+
+.featured-tours{
+
+    padding:100px 0;
+
+    background:#f5f9ff;
+
+}
+
+.tour-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.tour-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.tour-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.tour-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.tour-content{
+
+    padding:25px;
+
+}
+
+.tour-content h3{
+
+    color:#0d4d92;
+
+    margin-bottom:10px;
+
+}
+
+.tour-price{
+
+    margin:18px 0;
+
+    color:#f4b400;
+
+    font-size:22px;
+
+}
+.faq-item p{
+    display:none;
+}
+
+.faq-item.active p{
+    display:block;
+}
+/* ==========================================
+   PREMIUM FOOTER
+========================================== */
+
+.footer{
+
+    background:#062b52;
+
+    color:#ffffff;
+
+    padding:70px 0 0;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+
+}
+
+.footer-column h3{
+
+    color:#f4b400;
+
+    margin-bottom:20px;
+
+}
+
+.footer-column p{
+
+    color:#ddd;
+
+    margin-bottom:12px;
+
+}
+
+.footer-column ul{
+
+    padding:0;
+
+}
+
+.footer-column ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-column ul li a{
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer-column ul li a:hover{
+
+    color:#f4b400;
+
+    padding-left:6px;
+
+}
+
+.footer-logo{
+
+    width:80px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+    background:#0d4d92;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+    background:#f4b400;
+
+    color:#000;
+
+    transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+    margin-top:50px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding:25px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.footer-bottom p{
+
+    margin:0;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+.footer-links a{
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#f4b400;
+
+}
+/* ==========================================
+   SMART NAVBAR
+========================================== */
+
+.header{
+
+    transition:all .35s ease;
+
+}
+
+.header.scrolled{
+
+    background:#062b52;
+
+    padding:0;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+}
+
+.header.scrolled .navbar{
+
+    padding:12px 0;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+}
+
+.nav-links a.active{
+
+    color:#f4b400;
+
+}
+
+.nav-links a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:3px;
+
+    background:#f4b400;
+
+}
+/* ===========================
+   DESTINATION SLIDER
+=========================== */
+
+.destination-slider{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.destination-track{
+
+    display:flex;
+
+    gap:30px;
+
+    transition:transform .6s ease;
+
+}
+
+.destination-card{
+
+    min-width:350px;
+
+    flex-shrink:0;
+
+}
+
+.slider-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0A66C2;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.slider-btn:hover{
+
+    background:#F4B400;
+
+    color:#000;
+
+}
+
+.prev{
+
+    left:15px;
+
+}
+
+.next{
+
+    right:15px;
+
+}
+/* ===========================
+   TESTIMONIAL SLIDER
+=========================== */
+
+.testimonial-grid{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.testimonial-card{
+
+    display:none;
+
+    animation:fadeIn .8s ease;
+
+}
+
+.testimonial-card.active{
+
+    display:block;
+
+}
+/* ===========================
+   SUCCESS MODAL
+=========================== */
+
+.success-modal{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.success-modal.show{
+
+    display:flex;
+
+    animation:fadeIn .4s ease;
+
+}
+
+.success-box{
+
+    background:#fff;
+
+    width:90%;
+
+    max-width:450px;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.success-icon{
+
+    font-size:70px;
+
+    color:#28a745;
+
+    margin-bottom:20px;
+
+}
+
+.success-box h2{
+
+    color:#083D77;
+
+    margin-bottom:15px;
+
+}
+
+.success-box p{
+
+    color:#555;
+
+    margin-bottom:30px;
+
+    line-height:1.7;
+
+}
+/* ===========================
+   LOADING SCREEN
+=========================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#083D77;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:opacity .8s ease, visibility .8s ease;
+
+}
+
+#loader.hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.loader-content img{
+
+    width:110px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    animation:loaderFloat 2s infinite ease-in-out;
+
+}
+
+.loader-content h2{
+
+    color:#fff;
+
+    margin-bottom:8px;
+
+}
+
+.loader-content p{
+
+    color:#ddd;
+
+    margin-bottom:25px;
+
+}
+
+.loader-spinner{
+
+    width:60px;
+
+    height:60px;
+
+    border:5px solid rgba(255,255,255,.3);
+
+    border-top:5px solid #F4B400;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes loaderFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+/* ===========================
+   HERO FADE EFFECT
+=========================== */
+
+.hero.fade-out{
+
+    opacity:0;
+
+}
+
+.hero.fade-in{
+
+    opacity:1;
+
+}
+/* ===========================
+   HERO SEARCH
+=========================== */
+
+.hero-search{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-search select{
+
+    width:260px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-family:Poppins,sans-serif;
+
+}
+
+.hero-search button{
+
+    min-width:170px;
+
+}
+/* ===========================
+   BOOKING ANIMATION
+=========================== */
+
+.booking{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:all .9s ease;
+
+}
+
+.booking.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* ===========================
+   SUCCESS MODAL
+=========================== */
+
+.success-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:999999;
+
+}
+
+.success-modal.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.success-box{
+
+    width:90%;
+
+    max-width:450px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transform:scale(.8);
+
+    transition:.4s;
+
+}
+
+.success-modal.show .success-box{
+
+    transform:scale(1);
+
+}
+
+.success-box i{
+
+    font-size:70px;
+
+    color:#2ecc71;
+
+    margin-bottom:20px;
+
+}
+
+.success-box h2{
+
+    color:#083D77;
+
+    margin-bottom:15px;
+
+}
+
+.success-box p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}

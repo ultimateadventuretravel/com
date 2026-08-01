@@ -1,0 +1,218 @@
+/* ==========================================
+   Ultimate Adventure Travel Pty Ltd
+   responsive.css
+========================================== */
+
+/* ================= SEARCH RESPONSIVE ================= */
+
+@media (max-width:900px){
+
+    .search-box{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* ================= LARGE TABLETS ================= */
+
+@media (max-width:992px){
+
+.container{
+    width:95%;
+}
+
+.hero h1,
+.about-hero h1{
+    font-size:2.5rem;
+}
+
+.grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/* ================= TABLETS ================= */
+
+@media (max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.logo{
+    justify-content:center;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero,
+.about-hero{
+    min-height:55vh;
+    padding:80px 20px;
+}
+
+.hero h1,
+.about-hero h1{
+    font-size:2.2rem;
+}
+
+.hero p,
+.about-hero p{
+    font-size:1rem;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.card,
+.tour-card,
+.job,
+.feature{
+    margin-bottom:20px;
+}
+
+form{
+    padding:20px;
+}
+
+input,
+select,
+textarea{
+    font-size:16px;
+}
+
+footer{
+    padding:25px;
+}
+
+}
+
+
+/* ================= MOBILE PHONES ================= */
+
+@media (max-width:576px){
+
+.container{
+    padding:0 15px;
+}
+
+.logo img{
+    height:45px;
+}
+
+.logo{
+    font-size:1rem;
+}
+
+.nav-links{
+    flex-direction:column;
+    align-items:center;
+}
+
+.nav-links a{
+    padding:8px 0;
+}
+
+.hero,
+.about-hero{
+    min-height:45vh;
+    padding:60px 15px;
+}
+
+.hero h1,
+.about-hero h1{
+    font-size:1.8rem;
+}
+
+.hero p,
+.about-hero p{
+    font-size:0.95rem;
+}
+
+.section-title h2,
+.section-heading h2{
+    font-size:1.7rem;
+}
+
+.btn,
+.btn-primary{
+    width:100%;
+    text-align:center;
+}
+
+.card img,
+.tour-card img{
+    height:200px;
+}
+
+footer{
+    font-size:14px;
+}
+
+}
+
+
+/* ================= EXTRA SMALL DEVICES ================= */
+
+@media (max-width:380px){
+
+.hero h1,
+.about-hero h1{
+    font-size:1.5rem;
+}
+
+.hero p{
+    font-size:.9rem;
+}
+
+.logo span{
+    display:none;
+}
+
+}
+/* ================= FOOTER ================= */
+
+@media (max-width:900px){
+
+.footer{
+
+    text-align:center;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+}
+
+.footer-links{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+}
