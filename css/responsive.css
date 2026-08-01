@@ -1,217 +1,194 @@
-/* ==========================================
-   Ultimate Adventure Travel Pty Ltd
-   responsive.css
-========================================== */
-
-/* ================= SEARCH RESPONSIVE ================= */
-
-@media (max-width:900px){
-
-    .search-box{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* ================= LARGE TABLETS ================= */
-
-@media (max-width:992px){
-
-.container{
-    width:95%;
-}
-
-.hero h1,
-.about-hero h1{
-    font-size:2.5rem;
-}
-
-.grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-
-/* ================= TABLETS ================= */
+/* ================= MOBILE HEADER ================= */
 
 @media (max-width:768px){
 
-.navbar{
-    flex-direction:column;
-    gap:20px;
-}
+.header{
 
-.logo{
-    justify-content:center;
-}
+    width:100%;
 
-.nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
+    padding:12px 0;
 
-.hero,
-.about-hero{
-    min-height:55vh;
-    padding:80px 20px;
-}
+    background:#083D77;
 
-.hero h1,
-.about-hero h1{
-    font-size:2.2rem;
-}
+    position:fixed;
 
-.hero p,
-.about-hero p{
-    font-size:1rem;
-}
+    top:0;
 
-.grid{
-    grid-template-columns:1fr;
-}
+    left:0;
 
-.card,
-.tour-card,
-.job,
-.feature{
-    margin-bottom:20px;
-}
-
-form{
-    padding:20px;
-}
-
-input,
-select,
-textarea{
-    font-size:16px;
-}
-
-footer{
-    padding:25px;
-}
+    z-index:999;
 
 }
-
-
-/* ================= MOBILE PHONES ================= */
-
-@media (max-width:576px){
 
 .container{
+
+    width:100%;
+
+    max-width:100%;
+
     padding:0 15px;
+
+    margin:auto;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* LOGO */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
 }
 
 .logo img{
-    height:45px;
-}
 
-.logo{
-    font-size:1rem;
-}
+    width:48px;
 
-.nav-links{
-    flex-direction:column;
-    align-items:center;
-}
+    height:48px;
 
-.nav-links a{
-    padding:8px 0;
-}
-
-.hero,
-.about-hero{
-    min-height:45vh;
-    padding:60px 15px;
-}
-
-.hero h1,
-.about-hero h1{
-    font-size:1.8rem;
-}
-
-.hero p,
-.about-hero p{
-    font-size:0.95rem;
-}
-
-.section-title h2,
-.section-heading h2{
-    font-size:1.7rem;
-}
-
-.btn,
-.btn-primary{
-    width:100%;
-    text-align:center;
-}
-
-.card img,
-.tour-card img{
-    height:200px;
-}
-
-footer{
-    font-size:14px;
-}
-
-}
-
-
-/* ================= EXTRA SMALL DEVICES ================= */
-
-@media (max-width:380px){
-
-.hero h1,
-.about-hero h1{
-    font-size:1.5rem;
-}
-
-.hero p{
-    font-size:.9rem;
 }
 
 .logo span{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#FFC107;
+
+    line-height:1.2;
+
+}
+
+/* BOOK NOW BUTTON */
+
+.book-btn{
+
     display:none;
-}
-
-}
-/* ================= FOOTER ================= */
-
-@media (max-width:900px){
-
-.footer{
-
-    text-align:center;
 
 }
 
-.footer-grid{
+/* HAMBURGER */
 
-    grid-template-columns:1fr;
+.mobile-menu{
 
-}
-
-.footer-social{
-
-    justify-content:center;
-
-}
-
-.footer-bottom{
+    display:flex;
 
     flex-direction:column;
 
-}
-
-.footer-links{
-
     justify-content:center;
 
-    flex-wrap:wrap;
+    align-items:center;
+
+    cursor:pointer;
+
+    width:40px;
+
+    height:40px;
+
+}
+
+.mobile-menu span{
+
+    width:28px;
+
+    height:3px;
+
+    background:#fff;
+
+    margin:4px 0;
+
+    border-radius:3px;
+
+}
+
+/* NAVIGATION */
+
+.nav-links{
+
+    position:absolute;
+
+    top:72px;
+
+    left:0;
+
+    width:100%;
+
+    background:#083D77;
+
+    display:none;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:15px 0;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+.nav-links a{
+
+    color:#fff;
+
+    padding:14px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+}
+
+.nav-links a:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* MOBILE BOOK BUTTON */
+
+.mobile-book{
+
+    display:block;
+
+    width:90%;
+
+    margin:15px auto 5px;
+
+    background:#FFC107;
+
+    color:#111;
+
+    padding:14px;
+
+    border-radius:40px;
+
+    text-align:center;
+
+    font-weight:700;
+
+    text-decoration:none;
 
 }
 
