@@ -205,32 +205,49 @@ ul{
 
     display:inline-flex;
 
-    align-items:center;
-
     justify-content:center;
 
-    background:#F4B400;
+    align-items:center;
+
+    min-width:190px;
+
+    padding:14px 30px;
+
+    background:var(--gold);
 
     color:#222;
 
-    padding:13px 28px;
+    border:none;
 
     border-radius:50px;
 
+    font-family:'Poppins',sans-serif;
+
+    font-size:16px;
+
     font-weight:600;
 
-    transition:.3s;
+    line-height:1;
+
+    cursor:pointer;
 
     white-space:nowrap;
+
+    transition:all .35s ease;
 
 }
 
 .btn-primary:hover{
 
-    background:#fff;
+    background:#ffffff;
+
+    color:var(--darkBlue);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
-
 /* ===================
    HAMBURGER
 =================== */
