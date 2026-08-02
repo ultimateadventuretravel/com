@@ -268,35 +268,45 @@ ul{
 
 .hero{
 
-    position: relative;
-    height: 100vh;
+    position:relative;
 
-    background-image:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("../images/hero/hero1.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height:100vh;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
-    color:white;
+    padding:140px 20px 100px;
 
     overflow:hidden;
 
-    transition:opacity .8s ease;
+    color:#fff;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("../images/hero/hero1.jpg");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
 
 }
+
 .hero-content{
+
+    width:100%;
 
     max-width:900px;
 
-    color:white;
+    margin:auto;
+
+    z-index:2;
 
     animation:fadeIn 1.5s ease;
 
@@ -304,32 +314,37 @@ ul{
 
 .hero h1{
 
-    font-size:4rem;
-
-    margin:20px 0;
+    font-size:clamp(2.5rem,5vw,4.5rem);
 
     font-weight:800;
 
-letter-spacing:-1px;
+    line-height:1.15;
+
+    margin-bottom:20px;
+
+    letter-spacing:-1px;
+
 }
 
 .hero h2{
 
-    font-size:2rem;
-
-    color:white;
-
-    margin-bottom:25px;
+    font-size:clamp(1.2rem,2vw,2rem);
 
     font-weight:400;
+
+    margin-bottom:25px;
 
 }
 
 .hero p{
 
-    font-size:1.15rem;
+    font-size:clamp(1rem,1.3vw,1.2rem);
 
-    margin-bottom:35px;
+    line-height:1.8;
+
+    max-width:750px;
+
+    margin:0 auto 35px;
 
 }
 
@@ -339,35 +354,47 @@ letter-spacing:-1px;
 
     justify-content:center;
 
+    align-items:center;
+
     gap:20px;
 
     flex-wrap:wrap;
 
 }
+
+.hero-buttons .btn-primary,
+
+.hero-buttons .btn-secondary{
+
+    min-width:190px;
+
+    text-align:center;
+
+}
+
 .btn-secondary{
 
     background:transparent;
 
-    color:white;
+    border:2px solid #fff;
 
-    border:2px solid white;
+    color:#fff;
 
     padding:13px 28px;
 
     border-radius:50px;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
 .btn-secondary:hover{
 
-    background:white;
+    background:#fff;
 
     color:#222;
 
 }
-
 /* ===========================
    ANIMATIONS
 =========================== */
